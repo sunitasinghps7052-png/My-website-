@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>रक्षाबंधन पर्व शुभकामनाएं</title>
+    <style>
+        /* --- CSS Reset & Variables --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --bg-black: #121212;
+            --bg-card: #1e1e1e;
+            --text-white: #ffffff;
+            --text-grey: #b0b0b0;
+            --accent-red: #e50914;
+            --border-grey: #333333;
+        }
+        
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        body {
+    /* डार्क और रिच बैकग्राउंड बेस */
+    background-color: #0f172a;
+    
+    /* मॉडर्न मल्टी-कलर रेडियल ग्रेडिएंट डिजाइन */
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* बेसिक पेज सेटिंग्स ताकि टेक्स्ट अच्छे से दिखे */
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        /* --- Header & Hero Section --- */
+        header {
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(18,18,18,1) 100%);
+            padding: 20px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-grey);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-red);
+            letter-spacing: 1px;
+            font-family: csur;
+        }
+
+        nav a {
+            color: var(--text-grey);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--text-white);
+        }
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: radial-gradient(circle at center, #2a080a 0%, var(--bg-black) 70%);
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--text-white);
+            margin-bottom: 15px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 span {
+            color: var(--accent-red);
+        }
+
+        .hero p {
+            color: var(--text-grey);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .cta-btn {
+            background-color: var(--accent-red);
+            color: var(--text-white);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-btn:hover {
+            background-color: #65437C;
+            transform: scale(1.08);
+        }
+
+        /* --- Sections Container --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+            color: var(--text-white);
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-red);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* --- Gallery Section --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-grey);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-red);
+            border: 1px solid #864B37;
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: filter 0.3s;
+        }
+
+        .card:hover img {
+            filter: grayscale(0%);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            color: var(--text-white);
+            margin-bottom: 10px;
+        }
+
+        .card-body p {
+            color: var(--text-grey);
+            font-size: 0.95rem;
+        }
+
+        /* --- Interactive Greeting Generator --- */
+        .interactive-section {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-grey);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .input-box {
+            width: 80%;
+            max-width: 400px;
+            padding: 12px 15px;
+            margin: 20px 0;
+            background-color: var(--bg-black);
+            border: 1px solid var(--border-grey);
+            color: var(--text-white);
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .input-box:focus {
+            border-color: var(--accent-red);
+        }
+
+        .wishes-card {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: var(--bg-black);
+            border-left: 4px solid var(--accent-red);
+            border-radius: 4px;
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .wishes-card h4 {
+            color: var(--accent-red);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- Floating Thali Vector --- */
+        .rakhi-vector {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0a0a0a;
+            border-top: 1px solid var(--border-grey);
+            color: var(--text-grey);
+            font-size: 0.9rem;
+        }
+
+        footer span {
+            color: var(--accent-red);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Header -->
+    <header>
+        <div class="logo">Priyanshu ki traf se happy Rashbandan</div>
+        <nav>
+            <a href="#about">महत्व</a>
+            <a href="#gallery">गैलरी</a>
+            <a href="#greeting">कार्ड बनाएं</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <svg class="rakhi-vector" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#e50914" stroke-width="3"/>
+            <circle cx="50" cy="50" r="30" fill="#e50914" />
+            <circle cx="50" cy="50" r="15" fill="#ffffff" />
+            <circle cx="50" cy="50" r="5" fill="#121212" />
+        </svg>
+        <h1>प्रेम एवं सुरक्षा का प्रतीक <span>रक्षाबंधन</span></h1>
+        <p>भाई-बहन के अटूट स्नेह, विश्वास और समर्पण के पवित्र पर्व की हार्दिक शुभकामनाएं।</p>
+        <button class="cta-btn" onclick="scrollToGreeting()">शुभकामना कार्ड बनाएं</button>
+    </section>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about" style="margin-bottom: 60px;">
+            <h2 class="section-title">पावन पर्व का महत्व</h2>
+            <div style="background-color: var(--bg-card); padding: 25px; border-radius: 12px; border: 1px solid var(--border-grey);">
+                <p style="color: var(--text-grey); text-align: center; max-width: 800px; margin: 0 auto;">
+                    रक्षाबंधन का त्यौहार केवल एक रेशमी धागा बाँधने का नियम नहीं है, बल्कि यह दो हृदयों के बीच स्नेह, विश्वास और आजीवन सुरक्षा का पवित्र संकल्प है। इस दिन बहनें भाई की लंबी उम्र की कामना करती हैं और भाई अपनी बहनों की रक्षा का वचन देते हैं।
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section id="gallery">
+            <h2 class="section-title">पर्व की झलकियां</h2>
+            <div class="gallery-grid">
+                
+                <div class="card">
+                    <img src="/puja.jpg">
+                    <div class="card-body">
+                        <h3>मेरे तरफ आप सभी को</h3>
+                        <p>आपको आपके पूरे परिवार को रक्षाबंधन जैसा शुभकामनाएं</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="/rakhi.jpg">
+                    <div class="card-body">
+                        <h3>रेशमी धागा</h3>
+                        <p>यह पवित्र धागा भाई और बहन के मजबूत रिश्ते का विश्वास है।</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="sweet.jpg">
+                    <div class="card-body">
+                        <h3>मिठास और खुशी</h3>
+                        <p>त्यौहार की मिठास रिश्तों में अपार प्रेम और आनंद घोलती है।</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Wish Generator -->
+        <section id="greeting" class="interactive-section">
+            <h2 class="section-title" style="margin-bottom: 15px;"> डिजिटल शुभकामनाएं भेजें</h2>
+            <p style="color: var(--text-grey);">अपना नाम दर्ज करें और एक विशेष रक्षाबंधन संदेश बनाएं!</p>
+            
+            <input type="text" id="userName" class="input-box" placeholder="आपका नाम लिखें👈..." autocomplete="off">
+            <br>
+            <button class="cta-btn" onclick="generateWish()">संदेश उत्पन्न करें</button>
+
+            <div id="wishesCard" class="wishes-card">
+                <h4 id="displayWishTitle"></h4>
+                <p id="displayWishMessage" style="color: var(--text-grey);"></p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>रक्षाबंधन की हार्दिक शुभकामनाएं | Design by <span>Priyanshu</span></p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Smooth Scroll Functionality
+        function scrollToGreeting() {
+            document.getElementById('greeting').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Greeting Card Generator Logic
+        function generateWish() {
+            const nameInput = document.getElementById('userName').value.trim();
+            const wishesCard = document.getElementById('wishesCard');
+            const wishTitle = document.getElementById('displayWishTitle');
+            const wishMessage = document.getElementById('displayWishMessage');
+
+            if (nameInput === "") {
+                alert("कृपया संदेश उत्पन्न करने के लिए अपना नाम लिखें!");
+                return;
+            }
+
+            const messages = [
+                "की तरफ से आपको और आपके परिवार को रक्षाबंधन की अनंत शुभकामनाएं! यह पावन पर्व आपके जीवन में सुख, शांति और समृद्धि लाए।",
+                "की ओर से रक्षाबंधन का यह पवित्र त्यौहार आपके रिश्ते में मिठास और हमेशा खुशहाली बनाए रखे। शुभ रक्षाबंधन!",
+                "की शुभकामना: बहन का प्यार, भाई का दुलार, मुबारक हो आपको रक्षाबंधन का त्यौहार!"
+            ];
+
+            // Pick a random message index
+            const randomIndex = Math.floor(Math.random() * messages.length);
+
+            wishTitle.innerText = "✨ " + nameInput + " ✨";
+            wishMessage.innerText = messages[randomIndex];
+
+            wishesCard.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
